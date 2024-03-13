@@ -6,27 +6,32 @@ public class App {
     double valorSF = 0, valorAgua = 0, valorBebida = 0, valorDoce = 0, valorPF = 0, total = 0;
     Scanner teclado = new Scanner(System.in);
     do{
-    System.out.println(" O que você deseja: \n\n 1- Almoço Self Service(R$25,00) \n 2- Prato Feito(R$20,00) \n 3- Bebida Lata(R$8,00) \n 4- Água(R$3,00) \n 5- Doces(R$2,50) \n\n 20-Fechar conta");
+    System.out.println("\nNosso cardápio: \n 1- Almoço Self Service(R$25,00) \n 2- Prato Feito(R$20,00) \n 3- Bebida Lata(R$8,00) \n 4- Água(R$3,00) \n 5- Doces(R$2,50)\n 20-Fechar conta\n O que você deseja: ");
     codProduto = teclado.nextInt();
      switch (codProduto) {
         case 1:
-            qntdSf++;
-            valorSF = qntdSf * 25;
+            System.out.println("\n Digite a quantidade desejada: ");
+            qntdSf = teclado.nextInt();
+            valorSF = qntdSf * 25; 
             break;
         case 2:
-            qntdPf++;
+            System.out.println("\nDigite a quantidade desejada: ");
+            qntdPf = teclado.nextInt();
             valorPF = qntdPf * 20;
             break;
         case 3:
-            qntdBebida++;
+            System.out.println("\nDigite a quantidade desejada: ");
+            qntdBebida = teclado.nextInt();
             valorBebida = qntdBebida * 8;
             break;
         case 4:
-            qntdAgua++;
+            System.out.println("\nDigite a quantidade desejada: ");
+            qntdAgua = teclado.nextInt();
             valorAgua = qntdAgua * 3;
             break;
         case 5:
-            qntdDoce++; 
+            System.out.println("\nDigite a quantidade desejada: ");
+            qntdAgua = teclado.nextInt();
             valorDoce = qntdDoce * 2.5;
             break;
         default:
@@ -37,12 +42,12 @@ public class App {
 
     total = valorSF + valorAgua + valorBebida + valorDoce + valorPF; 
 
-    System.out.println("Quantidade de Self Service: " + qntdSf + ". Total: " + valorSF);
-    System.out.println("Quantidade de Prato feito:" + qntdPf + ". Total: " + valorPF);
-    System.out.println("Quantidade de Bebidas:" + qntdBebida + ". Total: " + valorBebida);
-    System.out.println("Quantidade de Água:" + qntdAgua + ". Total: " + valorAgua);
-    System.out.println("Quantidade de Doces:" + qntdDoce + ". Total: " + valorDoce);
-    System.out.println("Total: R$" + total );
+    System.out.println("\nQuantidade de Self Service: " + qntdSf + ". Total: " + valorSF);
+    System.out.println("\nQuantidade de Prato feito: " + qntdPf + ". Total: " + valorPF);
+    System.out.println("\nQuantidade de Bebidas: " + qntdBebida + ". Total: " + valorBebida);
+    System.out.println("\nQuantidade de Água: " + qntdAgua + ". Total: " + valorAgua);
+    System.out.println("\nQuantidade de Doces: " + qntdDoce + ". Total: " + valorDoce);
+    System.out.println("\nTotal: R$" + total );
     
     teclado.close();
     }
