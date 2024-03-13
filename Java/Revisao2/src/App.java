@@ -6,30 +6,33 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         
         long ra = 0;
-        int qtdAds = 0, qtdInfo = 0, qtdAgro = 0, qtdMulher = 0, maiorIdade = 0, menorIdade = 200, qtdAgroSexto = 0;
-        String nomePessoaMaisVelha = null, cursoPessoaMaisNova = null;
+        int idade=0, qtdAds = 0, qtdInfo = 0, qtdAgro = 0, qtdMulher = 0, maiorIdade = 0, menorIdade = 200, qtdAgroSexto = 0;
+        String nomePessoaMaisVelha = null, cursoPessoaMaisNova = null, sexo ="";
 
         do {
-            System.out.println("Insira o RA (0 para sair): ");
+            System.out.println("Insira o número do RA ou digite 0 para sair: ");
             ra = scanner.nextLong();
 
             if(ra == 0) {
                 continue;
             }
             
-            System.out.println("Nome: ");
+            System.out.println("Digite o Primeiro nome: ");
             String nome = scanner.next();
- 
-            System.out.println("Idade: ");
-            int idade = scanner.nextInt();
-
+            do{
+            System.out.println("Digite a Idade: ");
+            idade = scanner.nextInt();
+            }while (idade < 0 || idade >110);
             if(idade > maiorIdade) {
                 maiorIdade = idade;
                 nomePessoaMaisVelha = nome;
             }
 
-            System.out.println("Sexo: ");
-            String sexo = scanner.next();
+            do{
+            System.out.println("Digite o Sexo (F-Feminino ou M-Masculino): ");
+            sexo = scanner.next();
+            }while(!sexo.equalsIgnoreCase("F") && !sexo.equalsIgnoreCase("M"));
+
 
             if(sexo.equalsIgnoreCase("F")) {
                 qtdMulher += 1;
@@ -37,10 +40,10 @@ public class App {
 
             scanner.nextLine();
             
-            System.out.println("Curso [ADS, AGRO, INFO]");
+            System.out.println("Digite o Curso (ADS- Análise e Desenvolvimento de Sistemas / AGRO - Agronegócio / INFO - Informática para Negócio)");
             String curso = scanner.nextLine();
             
-            System.out.println("Período: ");
+            System.out.println("Digite o Período do curso: ");
             int periodo = scanner.nextInt();
 
             if(curso.equalsIgnoreCase("ADS")) {
@@ -65,9 +68,9 @@ public class App {
         } while (ra != 0);
 
         System.out.println("---Strings---");
-        System.out.println("Alunos do ADS: "+ qtdAds);
-        System.out.println("Alunos do INFO: "+ qtdInfo);
-        System.out.println("Alunos do AGRO: "+ qtdAgro);
+        System.out.println("Quantidades de Alunos do ADS: "+ qtdAds);
+        System.out.println("Quantidades de Alunos do INFO: "+ qtdInfo);
+        System.out.println("Quantidades de Alunos do AGRO: "+ qtdAgro);
 
         System.out.println("A quantidade de pessoas do sexo Feminino é: "+qtdMulher);
         System.out.println("A pessoa mais velha possui "+maiorIdade+" anos, e se chama "+nomePessoaMaisVelha);
