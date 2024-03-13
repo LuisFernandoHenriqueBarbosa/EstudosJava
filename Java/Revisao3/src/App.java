@@ -14,7 +14,7 @@ public class App {
     }
      switch (codProduto) {
         case 1:
-            System.out.println("\n Digite a quantidade desejada: ");
+            System.out.println("\nDigite a quantidade desejada: ");
             qntdSf = teclado.nextInt();
             valorSF = qntdSf * 25; 
             break;
