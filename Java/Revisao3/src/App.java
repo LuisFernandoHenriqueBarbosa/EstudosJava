@@ -35,7 +35,6 @@ public class App {
             valorDoce = qntdDoce * 2.5;
             break;
         default:
-        
             break;
      }
     }while(codProduto != 20);
