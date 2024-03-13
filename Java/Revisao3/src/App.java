@@ -8,9 +8,13 @@ public class App {
     do{
     System.out.println("\nNosso cardápio: \n 1- Almoço Self Service(R$25,00) \n 2- Prato Feito(R$20,00) \n 3- Bebida Lata(R$8,00) \n 4- Água(R$3,00) \n 5- Doces(R$2,50)\n 20-Fechar conta\n O que você deseja: ");
     codProduto = teclado.nextInt();
+    if (codProduto != 1 && codProduto != 2 && codProduto != 3 && codProduto != 4 && codProduto != 5 && codProduto != 20) {
+        System.out.println("Código de produto inválido. Por favor, escolha um código válido.");
+        continue;
+    }
      switch (codProduto) {
         case 1:
-            System.out.println("\n Digite a quantidade desejada: ");
+            System.out.println("\nDigite a quantidade desejada: ");
             qntdSf = teclado.nextInt();
             valorSF = qntdSf * 25; 
             break;
@@ -35,7 +39,6 @@ public class App {
             valorDoce = qntdDoce * 2.5;
             break;
         default:
-        
             break;
      }
     }while(codProduto != 20);
