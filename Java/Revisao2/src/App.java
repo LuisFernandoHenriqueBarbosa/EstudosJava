@@ -1,41 +1,81 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        String nome = "", sexo = "", periodo = "", nomeVelha="", cursoNova="";
-        int tempIdade=0, tempIdade2=0, curso = 0, ra, idade, contInfo = 0, contAgro = 0, contDs = 0, contSexo = 0;
-        Scanner teclado = new Scanner(System.in);
+    public static void main(String[] args) {
+            
+        Scanner scanner = new Scanner(System.in);
+        
+        long ra = 0;
+        int qtdAds = 0, qtdInfo = 0, qtdAgro = 0, qtdMulher = 0, maiorIdade = 0, menorIdade = 200, qtdAgroSexto = 0;
+        String nomePessoaMaisVelha = null, cursoPessoaMaisNova = null;
 
         do {
-            System.out.println("Digite seu Ra: ");
-            ra = teclado.nextInt();
-            System.out.println("Digite seu nome completo: ");
-            nome = teclado.next();
-            System.out.println("Informe a sua idade");
-            idade = teclado.nextInt();
-            System.out.println("Informe seu sexo: M(masculino) ou F(Feminino)");
-            sexo = teclado.next();
-            System.out.println(
-                    "Informe o curso: 1(Informática para negócios) 2(Agronegócio) 3(Analise e Desenvolvimento de Sistemas)");
-            curso = teclado.nextInt();
-            System.out.println("Informe o seu período: M(Manhã), T(Tarde) ou N(noturno)");
-            periodo = teclado.next();
-            if (curso == 1) {
-                contInfo++;
-            } else if (curso == 2) {
-                contAgro++;
-            } else if (curso == 3) {
-                contDs++;
-            } else {
-                System.out.println("Curso não identificado");
-            }
+            System.out.println("Insira o RA (0 para sair): ");
+            ra = scanner.nextLong();
 
-            if (sexo == "F") {
-                contSexo++;
+            if(ra == 0) {
+                continue;
             }
-
             
-        } while (ra != 0 && ra > 0);
+            System.out.println("Nome: ");
+            String nome = scanner.next();
+ 
+            System.out.println("Idade: ");
+            int idade = scanner.nextInt();
 
+            if(idade > maiorIdade) {
+                maiorIdade = idade;
+                nomePessoaMaisVelha = nome;
+            }
+
+            System.out.println("Sexo: ");
+            String sexo = scanner.next();
+
+            if(sexo.equalsIgnoreCase("F")) {
+                qtdMulher += 1;
+            }
+
+            scanner.nextLine();
+            
+            System.out.println("Curso [ADS, AGRO, INFO]");
+            String curso = scanner.nextLine();
+            
+            System.out.println("Período: ");
+            int periodo = scanner.nextInt();
+
+            if(curso.equalsIgnoreCase("ADS")) {
+                qtdAds++;
+            } else if(curso.equalsIgnoreCase("AGRO")) {
+                qtdAgro++;
+                
+            } else if(curso.equalsIgnoreCase("INFO")) {
+                qtdInfo++;
+            }
+
+            if(curso.equalsIgnoreCase("AGRO") && periodo == 6) {
+                qtdAgroSexto++;
+            }
+
+            if(idade < menorIdade) {
+                menorIdade = idade;
+                cursoPessoaMaisNova = curso;
+                
+            }
+
+        } while (ra != 0);
+
+        System.out.println("---Strings---");
+        System.out.println("Alunos do ADS: "+ qtdAds);
+        System.out.println("Alunos do INFO: "+ qtdInfo);
+        System.out.println("Alunos do AGRO: "+ qtdAgro);
+
+        System.out.println("A quantidade de pessoas do sexo Feminino é: "+qtdMulher);
+        System.out.println("A pessoa mais velha possui "+maiorIdade+" anos, e se chama "+nomePessoaMaisVelha);
+
+        System.out.println("O curso da pessoa mais nova é "+ cursoPessoaMaisNova.toUpperCase() +", e sua idade é "+menorIdade);
+
+        System.out.println(qtdAgroSexto+" pessoas estão no 6o Período.");
+        
+        scanner.close();
     }
 }
