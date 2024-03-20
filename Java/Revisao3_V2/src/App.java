@@ -66,6 +66,16 @@ public class App {
                 menorGasto = valorUnitario[i];
             }
         }
+        
+        for(int i = 0; i < 5; i++){
+            for (int j = 0; j<4; j++){
+                if(valorUnitario[j] > valorUnitario[j+1]){
+                    double aux = valorUnitario[j];
+                    valorUnitario[j] = valorUnitario[j+1];
+                    valorUnitario[j+1] = aux;
+                }   
+            }
+        }
 
         System.out.println("\n Dados da comanda: ");
 
@@ -78,6 +88,10 @@ public class App {
         System.out.println("O valor total da comanda é: " + totalComanda);
         System.out.println("O maior valor gasto: " + maiorGasto);
         System.out.println("O menor valor gasto: " + menorGasto);
+        System.out.println("A lista em ordem crescente: ");
+        for (int i = 0; i <5; i++){
+            System.out.println(" " +  valorUnitario[i]);
+        }
 
         teclado.close();
     }
