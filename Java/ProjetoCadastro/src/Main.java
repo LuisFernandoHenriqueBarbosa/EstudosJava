@@ -30,7 +30,7 @@ public class Main {
         ler.close();
     }
     public static boolean ValidaCPF (String cpf) {
-        if(cpf. length() != 14){
+        if(cpf.length = 14){
             return false;
         }else{
             return true;
@@ -42,6 +42,6 @@ public class Main {
             return true;
         }
 
-        if(cep)
+        if(telefone.length)
     
 }
