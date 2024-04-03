@@ -8,9 +8,18 @@ public class Main {
         System.out.println("Digite o seu nome: ");
         objCliente.nome = ler.next();
         
-
+        Boolean cpfValido = false;
+        while(!cpfValido){
         System.out.println("Digite o seu CPF: ");
-        objCliente.cpf = ler.next();
+        String cpf = ler.next();
+        if(ValidaCPF(cpf)){
+            objCliente.cpf = cpf;
+            cpfValido = true;
+        }else{
+            System.out.println("CPF Inválido");
+        }
+        
+    }
 
         System.out.println("Digite o seu RG: ");
         objCliente.rg = ler.next();
@@ -30,18 +39,12 @@ public class Main {
         ler.close();
     }
     public static boolean ValidaCPF (String cpf) {
-        if(cpf.length = 14){
+        if(cpf.length() != 14){
             return false;
-        }else{
-            return true;
-        }
-
-        if(cpf.charAt(3) != '.' && cpf.charAt(7) != '.' && cpf.charAt(11) != '-'){
+        }else if(cpf.charAt(3) != '.' && cpf.charAt(7) != '.' && cpf.charAt(11) != '-'){
             return false;
-        }else{
+    }else{
             return true;
+    }
         }
-
-        if(telefone.length)
-    
 }
