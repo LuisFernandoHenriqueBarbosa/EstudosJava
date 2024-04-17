@@ -25,14 +25,14 @@ public class App {
         System.out.println("Digite o preco de custo do " + produtos.get(i));
         double precoCusto = teclado.nextDouble();
         precoDeCusto.add(precoCusto);
-        }
+        // }
 
-        for(int i = 0; i < produtos.size(); i ++){
+        // for(int i = 0; i < produtos.size(); i ++){
             System.out.println("Digite o preco de venda do " + produtos.get(i));
             double precoVenda = teclado.nextDouble();
             precoDeVenda.add(precoVenda);
-        }
-        for(int i = 0; i < produtos.size(); i ++){
+        // }
+        // for(int i = 0; i < produtos.size(); i ++){
             System.out.println("Digite a quantidade do " + produtos.get(i));
             int quantidadeProduto = teclado.nextInt();
             quantidadeEstoque.add(quantidadeProduto);
@@ -46,7 +46,7 @@ public class App {
         System.out.println("Lucro de cada produto:");
         for (int i = 0; i < produtos.size(); i++) {
             String nomeProduto = produtos.get(i);
-            double lucro = (precoDeVenda.get(i) - precoDeCusto.get(i)) * quantidadeEstoque.get(i);
+            double lucro = (precoDeVenda.get(i) - precoDeCusto.get(i));// * quantidadeEstoque.get(i);
             System.out.println(nomeProduto + ": " + lucro);
         }
     }
