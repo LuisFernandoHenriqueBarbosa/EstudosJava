@@ -32,18 +32,18 @@ public class App {
         //metodo da bolha
         //comparando as médias
         //na troca, faz a troca no vetor medias e no vetor nomes
-        for(int i = 0; i < 5; i++){
-            for (int j = 0; j < 4; j++){
-                if(medias[j] > medias[j+1]){
-                    double aux = medias[j];
-                    medias[j] = medias[j+1];
-                    medias[j+1] = aux;
-                    String auxNome = nomes[i];
-                    nomes[i] = nomes[i+1];
-                    nomes[i+1] = auxNome;
-                }   
+        for (int i = 0; i < medias.length - 1; i++) {
+            for (int j = 0; j < medias.length - 1 - i; j++) {
+                if (medias[j] > medias[j + 1]) {
+                    double tempMedia = medias[j];
+                    medias[j] = medias[j + 1];
+                    medias[j + 1] = tempMedia;
+                    String tempNome = nomes[j];
+                    nomes[j] = nomes[j + 1];
+                    nomes[j + 1] = tempNome;
+                }
             }
         }
-        System.out.println("A maior media: " + medias[4] + " do aluno: " + nomes[5]);
+        System.out.println("A maior media: " + medias[4] + " do aluno: " + nomes[4]);
     }
 }
