@@ -25,14 +25,9 @@ public class App {
         System.out.println("Digite o preco de custo do " + produtos.get(i));
         double precoCusto = teclado.nextDouble();
         precoDeCusto.add(precoCusto);
-        // }
-
-        // for(int i = 0; i < produtos.size(); i ++){
             System.out.println("Digite o preco de venda do " + produtos.get(i));
             double precoVenda = teclado.nextDouble();
             precoDeVenda.add(precoVenda);
-        // }
-        // for(int i = 0; i < produtos.size(); i ++){
             System.out.println("Digite a quantidade do " + produtos.get(i));
             int quantidadeProduto = teclado.nextInt();
             quantidadeEstoque.add(quantidadeProduto);
