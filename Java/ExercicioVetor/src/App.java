@@ -28,10 +28,18 @@ public class App {
         for(int i = 0; i < 5; i++){
             System.out.println(nomes[i] + ": " + medias[i]);
         }
+
+        float menorNota = notasAlunos[0][0];
+        String nomeMenorNota = "";
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (notasAlunos[i][j] < menorNota) {
+                      menorNota = notasAlunos[i][j];
+                      nomeMenorNota = nomes[i];
+                     }
+                    }
+                }
         
-        //metodo da bolha
-        //comparando as médias
-        //na troca, faz a troca no vetor medias e no vetor nomes
         for (int i = 0; i < medias.length - 1; i++) {
             for (int j = 0; j < medias.length - 1 - i; j++) {
                 if (medias[j] > medias[j + 1]) {
@@ -45,5 +53,7 @@ public class App {
             }
         }
         System.out.println("A maior media: " + medias[4] + " do aluno: " + nomes[4]);
+        System.out.println("Aluno com a menor nota: " + nomeMenorNota + " Nota: " + menorNota);
+
     }
 }
