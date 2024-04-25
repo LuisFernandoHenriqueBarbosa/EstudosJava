@@ -36,7 +36,7 @@ public class Animal {
                 System.out.println("Erro:" + erro.getMessage());
                 leia.next();
             }
-        }while (sexo != 'F' || sexo != 'f' || sexo != 'M' || sexo != 'm');
+        }while (sexo != 'F' && sexo != 'f' && sexo != 'M' && sexo != 'm');
         //Insere raça
         do{
             try {
@@ -51,7 +51,7 @@ public class Animal {
                 do{
                     try {
                         System.out.println("Digite a cor do Animal: ");
-                        raca = leia.next();
+                        cor = leia.next();
                     } catch (Exception erro) {
                         System.out.println("Erro:" + erro.getMessage());
                         leia.next();
