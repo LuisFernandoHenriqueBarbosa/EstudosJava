@@ -2,11 +2,11 @@ public class Curso {
     int id;
     String descricao, turno;
 
-    public Curso(int id, String descricao, String turno){
-        this.id = id;
-        this.descricao = descricao;
-        this.turno = turno;
-    }
+    // public Curso(int id, String descricao, String turno){
+    //     this.id = id;
+    //     this.descricao = descricao;
+    //     this.turno = turno;
+    // }
     public Curso(){
         
     }

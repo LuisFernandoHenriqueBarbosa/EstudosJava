@@ -49,8 +49,6 @@ public class App {
                     noturno++;
                 }
                 }
-        
-                // Mostra a quantidade de cursos por turno
                 System.out.println("Quantidade de cursos por turno:");
                 System.out.println("Matutino: " + matutino);
                 System.out.println("Vespertino: " + vespertino);
