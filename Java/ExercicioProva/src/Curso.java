@@ -1,6 +1,6 @@
 public class Curso {
-    int id;
-    String descricao, turno;
+    private int id;
+    private String descricao, turno;
 
     // public Curso(int id, String descricao, String turno){
     //     this.id = id;
