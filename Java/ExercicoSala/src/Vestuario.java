@@ -22,6 +22,6 @@ public final class Vestuario extends Produto {
     }
 
     public void mostrar(){
-        System.out.println("Produtos Perecível");
+        System.out.println("Produtos vestuarios");
     }
 }
