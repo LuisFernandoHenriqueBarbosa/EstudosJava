@@ -140,6 +140,8 @@ public class main {
                 for (String item : Vendidos) {
                     System.out.println(item);
                 }
+                case 6:
+                System.out.println("Programa Encerrado");
                 default:
                 System.out.println("Opção invalida: ");
                 break;
