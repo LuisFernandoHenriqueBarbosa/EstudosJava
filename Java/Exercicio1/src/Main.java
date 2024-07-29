@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
     /*
      * Faça um programa que receba uma quantidade indeterminada de valores, calcule
      * e mostre: Quantidade de valores positivos, negativos e % deles

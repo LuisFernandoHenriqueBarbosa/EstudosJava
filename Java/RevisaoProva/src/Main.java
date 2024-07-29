@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
         char continua;
         int matutino = 0;

@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
         float[][] notasAlunos = new float[5][4];
         String[] nomes = new String[5];

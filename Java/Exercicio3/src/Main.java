@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
     int codProduto=0, qntdSf=0, qntdPf=0, qntdBebida=0, qntdAgua=0, qntdDoce=0;
     double valorSF = 0, valorAgua = 0, valorBebida = 0, valorDoce = 0, valorPF = 0, total = 0;
